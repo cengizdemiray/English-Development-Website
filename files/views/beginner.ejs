@@ -1,0 +1,421 @@
+<%- include("partials/navbar.ejs") %>
+
+    <div id="container">
+        <img src="images/background2.jpg" alt="Resim Bulunamadı" class="image1">
+        <div class="information">
+            <h2>Level 1: Numbers</h2>
+            <ul>
+                <li>1 One</li>
+                <li>2 Two</li>
+                <li>3 Three</li>
+                <li>4 Four</li>
+                <li>5 Five</li>
+                <li>6 Six</li>
+                <li>7 Seven</li>
+                <li>8 Eight</li>
+                <li>9 Nine</li>
+                <li>10 Ten</li>
+                <li>11 Eleven</li>
+                <li>12 Twelve</li>
+                <li>13 Thirteen</li>
+                <li>14 Fourteen</li>
+                <li>15 Fifteen</li>
+                <li>16 Sixteen</li>
+                <li>17 Seventeen</li>
+                <li>18 Eighteen</li>
+                <li>19 Nineteen</li>
+                <li>20 Twenty</li>
+            </ul>
+            <a href="#" id="matchingLink" class="exercise-link">Matching Exercise</a>
+        </div>
+
+    </div>
+
+    <div id="matchingExercise" style="display: none;">
+        <h2>Number Matching Exercise</h2>
+        <div id="wordss">
+
+            <ul class="word-list" id="wordList"
+                style="display: inline-block; justify-content: center; margin-left: 600px;">
+                <!-- Eşleştirme egzersizi için kelimeler buraya eklenir -->
+                <li class="word-item" data-match="pair13">13</li>
+                <li class="word-item" data-match="pair1">1</li>
+                <li class="word-item" data-match="pair15">15</li>
+                <li class="word-item" data-match="pair3">3</li>
+                <li class="word-item" data-match="pair18">18</li>
+                <li class="word-item" data-match="pair5">5</li>
+                <li class="word-item" data-match="pair17">17</li>
+                <li class="word-item" data-match="pair6">6</li>
+                <li class="word-item" data-match="pair7">7</li>
+                <li class="word-item" data-match="pair19">19</li>
+                <li class="word-item" data-match="pair9">9</li>
+                <li class="word-item" data-match="pair4">4</li>
+                <li class="word-item" data-match="pair20">20</li>
+                <li class="word-item" data-match="pair2">2</li>
+                <li class="word-item" data-match="pair14">14</li>
+                <li class="word-item" data-match="pair10">10</li>
+                <li class="word-item" data-match="pair16">16</li>
+                <li class="word-item" data-match="pair11">11</li>
+                <li class="word-item" data-match="pair8">8</li>
+                <li class="word-item" data-match="pair12">12</li>
+            </ul>
+            <ul class="word-list" id="wordList2"
+                style="display: inline-block;  justify-content: center; margin-left: 25px;">
+                <!-- Eşleştirme egzersizi için kelimeler buraya eklenir -->
+                <li class="word-item" data-match="pair16">Sixteen</li>
+                <li class="word-item" data-match="pair1">One</li>
+                <li class="word-item" data-match="pair2">Two</li>
+                <li class="word-item" data-match="pair12">Twelve</li>
+                <li class="word-item" data-match="pair3">Three</li>
+                <li class="word-item" data-match="pair4">Four</li>
+                <li class="word-item" data-match="pair19">Nineteen</li>
+                <li class="word-item" data-match="pair5">Five</li>
+                <li class="word-item" data-match="pair20">Twenty</li>
+                <li class="word-item" data-match="pair6">Six</li>
+                <li class="word-item" data-match="pair7">Seven</li>
+                <li class="word-item" data-match="pair8">Eight</li>
+                <li class="word-item" data-match="pair17">Seventeen</li>
+                <li class="word-item" data-match="pair9">Nine</li>
+                <li class="word-item" data-match="pair10">Ten</li>
+                <li class="word-item" data-match="pair14">Fourteen</li>
+                <li class="word-item" data-match="pair11">Eleven</li>
+                <li class="word-item" data-match="pair13">Thirteen</li>
+                <li class="word-item" data-match="pair15">Fifteen</li>
+                <li class="word-item" data-match="pair18">Eighteen</li>
+
+
+
+                <!-- Diğer kelimeleri ekleyin -->
+            </ul>
+        </div>
+        <div id="result"></div>
+    </div>
+    <div id="congratulationsMessage" style="display: none; text-align: center; margin-top: 20px;">
+        <h3>Congratulations! You matched all the numbers correctly!</h3>
+        <a href="#" id="blankLink" class="exercise-link">Blank Exercise</a>
+
+    </div>
+    <div id="congratulationsMessage2" style="display: none; text-align: center; margin-top: 20px;">
+        <h3>Congratulations! You blanked all the numbers correctly!</h3>
+        <a href="#" id="contentLink" class="content-link">Let's go more numbers</a>
+
+    </div>
+
+    <div id="blankExercise" class="blank-exercise" style="display: none;">
+        <h2>Blank Fill Exercise</h2>
+        <ul class="word-list" id="blankWordList">
+            <!-- Boşluk doldurma egzersizi için kelimeler buraya eklenir -->
+            <li class="word-item" data-incomplete="1 O_e" data-answer="1 One" contentEditable="true"
+                style="width: 300px; height: 15px;margin: 5px 0;">1 O_e </li>
+            <li class="word-item" data-incomplete="3 T_ree" data-answer="3 Three" contentEditable="true"
+                style="width: 300px; height: 15px;margin: 5px 0;">3 T_ree</li>
+            <li class="word-item" data-incomplete="5 Fi_e" data-answer="5 Five" contentEditable="true"
+                style="width: 300px; height: 15px;margin: 5px 0;">5 Fi_e</li>
+            <li class="word-item" data-incomplete="8 Ei_ht" data-answer="8 Eight" contentEditable="true"
+                style="width: 300px; height: 15px;margin: 5px 0;">8 Ei_ht</li>
+            <li class="word-item" data-incomplete="9 Nin_ " data-answer="9 Nine" contentEditable="true"
+                style="width: 300px; height: 15px;margin: 5px 0;">9 Nin_</li>
+            <li class="word-item" data-incomplete="10 _en " data-answer="10 Ten" contentEditable="true"
+                style="width: 300px; height: 15px;margin: 5px 0;">10 _en</li>
+            <li class="word-item" data-incomplete="12 Twe_ve  " data-answer="12 Twelve" contentEditable="true"
+                style="width: 300px; height: 15px;margin: 5px 0;">12 Twe_ve</li>
+            <li class="word-item" data-incomplete="14 F_urteen  " data-answer="14 Fourteen" contentEditable="true"
+                style="width: 300px; height: 15px;margin: 5px 0;">14 F_urteen</li>
+            <li class="word-item" data-incomplete="17 Se_enteen  " data-answer="17 Seventeen" contentEditable="true"
+                style="width: 300px; height: 15px;margin: 5px 0;">17 Se_enteen</li>
+            <li class="word-item" data-incomplete="20 Twen_y  " data-answer="20 Twenty" contentEditable="true"
+                style="width: 300px; height: 15px;margin: 5px 0;">20 Twen_y</li>
+            <!-- ... Diğer kelimeler ... -->
+        </ul>
+
+        <button onclick="checkBlankExercise()" style="text-align: center;">Check Exercise</button>
+    </div>
+    <div id="moreContent" class="more-content" style="display: none;">
+        <h2>More Numbers</h2>
+        <ul class="word-list">
+            <li>20: Twenty</li>
+            <li>21: Twenty + one = Twenty-one</li>
+            <li>26: Twenty + six = Twenty-six</li>
+            <li>23: Twenty + three = Twenty-three</li>
+            <li>30: Thirty</li>
+            <li>32: Thirty + two = Thirty-two</li>
+            <li>35: Thirty + five = Thirty-five</li>
+            <li>40: Fourty</li>
+            <li>44: Fourty + four = Fourty-four</li>
+            <li>50: Fifty</li>
+            <li>60: Sixty</li>
+            <li>70: Seventy</li>
+            <li>80: Eighty</li>
+            <li>90: Ninety</li>
+            <li>100: One Hundred</li>
+        </ul>
+        <a href="#" id="summingExercise" class="exercise-link">Summing Exercise</a>
+    </div>
+    <div id="additionProblems" class="addition-problems" style="display: none; text-align: center;">
+        <h2>Addition Problems</h2>
+        <ul id="adding-list">
+            <li class="adding-item" data-answer="26" style="margin-bottom: 3%;">Twenty + six: <input class="userinput" type="text"
+                    style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"> + <input class="userinput2"
+                    type="text" style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"></li>
+            <li class="adding-item" data-answer="22" style="margin-bottom: 3%;">Twenty + two: <input class="userinput" type="text"
+                    style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"> + <input class="userinput2"
+                    type="text" style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"></li>
+            <li class="adding-item" data-answer="37" style="margin-bottom: 3%;">Thirty + seven: <input class="userinput" type="text"
+                    style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"> + <input class="userinput2"
+                    type="text" style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"></li>
+            <li class="adding-item" data-answer="96" style="margin-bottom: 3%;">Ninety + six: <input class="userinput" type="text"
+                    style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"> + <input class="userinput2"
+                    type="text" style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"></li>
+            <li class="adding-item" data-answer="41" style="margin-bottom: 3%;">Fourty + one: <input class="userinput" type="text"
+                    style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"> + <input class="userinput2"
+                    type="text" style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"></li>
+            <li class="adding-item" data-answer="39" style="margin-bottom: 3%;">Thirty + nine: <input class="userinput" type="text"
+                    style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"> + <input class="userinput2"
+                    type="text" style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"></li>
+            <li class="adding-item" data-answer="68" style="margin-bottom: 3%;">Sixty + eight: <input class="userinput" type="text"
+                    style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"> + <input class="userinput2"
+                    type="text" style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"></li>
+            <li class="adding-item" data-answer="77" style="margin-bottom: 3%;">Seventy + seven: <input class="userinput" type="text"
+                    style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"> + <input class="userinput2"
+                    type="text" style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"></li>
+            <li class="adding-item" data-answer="84" style="margin-bottom: 3%;">Eighty + four: <input class="userinput" type="text"
+                    style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"> + <input class="userinput2"
+                    type="text" style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"></li>
+            <li class="adding-item" data-answer="53" style="margin-bottom: 3%;">Fifty + three: <input class="userinput" type="text"
+                    style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"> + <input class="userinput2"
+                    type="text" style="width: 6%; height: 1%; margin-bottom:1%; margin-left: 0.4%;"></li>
+        </ul>
+        <button onclick="checkSummingExercise()" style="text-align: center;">Check
+            Exercise</button>
+    </div>
+    <div id="congratulationsMessage3" style="display: none; text-align: center; margin-top: 20px;">
+        <h3>Congratulations! You summed all the numbers correctly!</h3>
+    </div>
+
+    <script>
+        var username = '<%= username %>';
+        var puan = '<%= puan %>';
+        puan = parseInt(puan);
+        const wordPairs = {
+            pair1: 'One',
+            pair2: 'Two',
+            pair3: 'Tree',
+            pair4: 'Four',
+            pair5: 'Five',
+            pair6: 'Six',
+            pair7: 'Seven',
+            pair8: 'Eight',
+            pair9: 'Nine',
+            pair10: 'Ten',
+            pair11: 'Eleven',
+            pair12: 'Twelve',
+            pair13: 'Thirteen',
+            pair14: 'Fourteen',
+            pair15: 'Fifteen',
+            pair16: 'Sixteen',
+            pair17: 'Seventeen',
+            pair18: 'Eighteen',
+            pair19: 'Nineteen',
+            pair20: 'Twenty'
+        }
+        if (puan != 0) {
+            var information = document.querySelector('.information');
+            information.style.display = 'none';
+        }
+        // Bağlantıya etkinlik dinleyicisi ekle
+        document.getElementById('matchingLink').addEventListener('click', function (event) {
+            event.preventDefault(); // Sayfa yenilenmesini önle
+            var correctMatches = 0;
+            // Eşleştirme Egzersizi Gösterme Fonksiyonu
+            information = document.querySelector('.information');
+            information.style.display = 'none';
+            var matchingExercise = document.querySelector('#matchingExercise');
+            matchingExercise.style.display = 'block';
+
+            const wordsContainer = document.getElementById('wordss');
+
+            let selectedWord = null;
+
+            //let i = 0;
+            //while (i < wordsContainer.children.length) {
+            wordsContainer.addEventListener('click', function (event) {
+
+                const clickedItem = event.target;
+                if (clickedItem.classList.contains('word-item') && !clickedItem.classList.contains('selected')) {
+                    clickedItem.classList.add('selected');
+                    if (selectedWord === null) {
+                        // İlk tıklama
+                        selectedWord = clickedItem;
+                        console.log(selectedWord);
+                    } else {
+                        // İkinci tıklama
+                        const match1 = selectedWord.dataset.match;
+                        const match2 = clickedItem.dataset.match;
+                        console.log(clickedItem);
+                        if (wordPairs[match1] === wordPairs[match2]) {
+                            console.log('Eşleşti');
+                            // Eşleşme durumu
+                            selectedWord.classList.add('correct');
+                            clickedItem.classList.add('correct');
+                            selectedWord.style.display = 'none';
+                            clickedItem.style.display = 'none';
+                            correctMatches++;
+                            // Kontrol: Bütün kelimeler eşleşti mi?
+                            if (correctMatches === Object.keys(wordPairs).length) {
+                                document.getElementById('matchingExercise').style.display = 'none';
+                                document.getElementById('congratulationsMessage').style.display = 'block';
+                                debugger;
+                                puan = puan + 7;
+                                console.log(puan);
+                                console.log(username);
+                                fetch('/update-point', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json'
+                                    },
+                                    body: JSON.stringify({ point: puan })
+                                })
+                                    .then(response => {
+                                        if (!response.ok) {
+                                            throw new Error('Failed to update point');
+                                        }
+                                        return response.json();
+                                    })
+                                    .then(data => {
+                                        console.log('Point updated successfully');
+                                    })
+                                    .catch(error => {
+                                        console.error('Error updating point:', error);
+                                    });
+                                setTimeout(function () {
+
+                                }, 3000);
+                                console.log(puan);
+                                console.log(typeof puan);
+                                console.log(username);
+                            }
+                            selectedWord = null;
+                        } else {
+                            console.log('Eşleşmedi');
+                            // Eşleşmeme durumu
+
+                            setTimeout(() => {
+                                if (selectedWord && clickedItem) {
+                                    selectedWord.classList.remove('selected');
+                                    clickedItem.classList.remove('selected');
+                                    selectedWord = null;
+                                }
+
+                            }, 100);
+                        }
+
+                        // Seçili kelimeyi sıfırla
+
+                    }
+                }
+            });
+            //}
+        });
+        document.getElementById('blankLink').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('congratulationsMessage').style.display = 'none';
+            document.getElementById('blankExercise').style.display = 'block';
+        });
+
+        // Puan 7 ile 17 arasında ise veya blankLink butonuna basılınca aşağıdaki işlemleri gerçekleştir
+        if (puan >= 7 && puan < 17) {
+            document.getElementById('congratulationsMessage').style.display = 'none';
+            document.getElementById('blankExercise').style.display = 'block';
+        }
+        function checkBlankExercise() {
+            const blankResult = document.getElementById('blankResult');
+            const blankWordList = document.getElementById('blankWordList');
+            let correctCount = 0;
+
+            for (let i = 0; i < blankWordList.children.length; i++) {
+                const wordItem = blankWordList.children[i];
+                const answer = wordItem.dataset.answer;
+                const userInput = wordItem.innerText.trim();
+
+                if (userInput && userInput.toLowerCase() === answer.toLowerCase()) {
+                    wordItem.classList.add('correct');
+                    correctCount++;
+                } else {
+                    wordItem.classList.add('incorrect');
+                }
+
+            }
+
+            if (correctCount === blankWordList.children.length) {
+                document.getElementById('blankExercise').style.display = 'none';
+                document.getElementById('congratulationsMessage2').style.display = 'block';
+                puan = puan + 10;
+                fetch('/update-point', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ point: puan })
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Failed to update point');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Point updated successfully');
+                    })
+                    .catch(error => {
+                        console.error('Error updating point:', error);
+                    });
+            }
+        }
+        document.getElementById('contentLink').addEventListener('click', function (event) {
+            document.getElementById('congratulationsMessage2').style.display = 'none';
+            document.getElementById('moreContent').style.display = 'block';
+
+        })
+        if(puan >= 17){
+            document.getElementById('congratulationsMessage2').style.display = 'none';
+            document.getElementById('moreContent').style.display = 'block';
+        }
+        document.getElementById('summingExercise').addEventListener('click', function (event) {
+            document.getElementById('moreContent').style.display = 'none';
+            document.getElementById('additionProblems').style.display = 'block';
+
+        })
+
+        function checkSummingExercise() {
+            const summingList = document.getElementById('adding-list');
+            let correctCount = 0;
+            const userInput = Array(20).fill('');
+            for (let i = 0; i < summingList.children.length; i++) {
+                const wordItem = summingList.children[i];
+                const answer = wordItem.dataset.answer;
+                const input1 = wordItem.querySelector('.userinput');
+                const input2 = wordItem.querySelector('.userinput2');
+                userInput[i] = parseInt(wordItem.querySelector('.userinput').value);
+                userInput[i + 1] = parseInt(wordItem.querySelector('.userinput2').value);
+                console.log(userInput[i]);
+                console.log(userInput[i + 1]);
+                if (!isNaN(userInput[i]) && !isNaN(userInput[i + 1]) && userInput[i] + userInput[i + 1] === parseInt(answer)) {
+                    input1.classList.add('correct');
+                    input2.classList.add('correct');
+                    wordItem.classList.add('correct');
+                    console.log(wordItem);
+                    correctCount++;
+                } else {
+                    input1.classList.add('incorrect');
+                    input2.classList.add('incorrect');
+                    wordItem.classList.add('incorrect');
+                }
+            }
+
+            if (correctCount === summingList.children.length) {
+
+                document.getElementById('additionProblems').style.display = 'none';
+                document.getElementById('congratulationsMessage3').style.display = 'block';
+            }
+        }
+    </script>

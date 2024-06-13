@@ -1,0 +1,25 @@
+ul li{
+    margin-right: 10px;
+}
+.navbar-brand{
+    margin-right: 70px;
+}
+
+#sigin{
+    margin-left: -15px;
+    
+}
+#login{
+    margin-left: -25px;
+    
+}
+.container{
+    width: 85%;
+}
+.navbar{
+    margin-right: 250px;
+}
+
+.dropdown-menu{
+    background-color: #F9F4ED;
+}

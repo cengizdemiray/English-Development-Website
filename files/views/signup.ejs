@@ -1,0 +1,20 @@
+<div class="container">
+    <%- include("partials/navbar.ejs") %>
+    <img src="/images/background2.jpg" alt="Resim Bulunamadı" class="image1">
+    <div class="signupform">
+        <h1 style="text-align: center; margin: 10px;">Register Form</h1>
+        <form action="/signup" method="post">
+            <!-- Her input alanına name özelliği eklenmiştir -->
+            <input type="text" placeholder="Username" name="username">
+            <input type="email" placeholder="E-mail" name="email">
+            <input type="password" placeholder="Password" style="display: inline;" name="password">
+           
+            <input type="text" placeholder="Name" style="width: 49%; display: inline;" name="name">
+            
+            <input type="text" placeholder="Surname" style="width: 49%; display: inline; margin-left: 9px;" name="surname">
+            
+            <button type="submit" class="btn btn-success" style="width: 100%;">Submit</button>
+            <button type="reset" class="btn btn-danger" style="width: 100%; margin-top: 30px;">Reset</button>
+        </form>
+    </div>
+</div>
